@@ -1,0 +1,77 @@
+{
+  "source_motion_id": "004819",
+  "prompt": "a person makes a high kick with the left leg",
+  "n_frames": 131,
+  "joint_names": {
+    "0": "pelvis",
+    "7": "left_ankle",
+    "8": "right_ankle",
+    "10": "left_foot",
+    "11": "right_foot",
+    "12": "neck",
+    "15": "head",
+    "18": "left_elbow",
+    "19": "right_elbow",
+    "20": "left_wrist",
+    "21": "right_wrist"
+  },
+  "controls": [
+    {
+      "stage": "early",
+      "frame_fraction": 0.2,
+      "joints": [
+        0,
+        11,
+        15
+      ],
+      "axes": "x,y,z",
+      "values": [
+        [
+          0.00671093,
+          0.95335013,
+          -0.00931193
+        ],
+        [
+          -0.2273898,
+          0.01862756,
+          0.0278732
+        ],
+        [
+          0.00425598,
+          1.57193208,
+          0.07036954
+        ]
+      ]
+    },
+    {
+      "stage": "middle",
+      "frame": 50,
+      "joints": [
+        10
+      ],
+      "axes": "x,y,z",
+      "values": [
+        [
+          -0.279037,
+          1.19895673,
+          0.89285433
+        ]
+      ]
+    },
+    {
+      "stage": "late",
+      "frame_fraction": 0.8,
+      "joints": [
+        21
+      ],
+      "axes": "x,y,z",
+      "values": [
+        [
+          -0.3900229,
+          0.91897696,
+          -0.01801935
+        ]
+      ]
+    }
+  ]
+}

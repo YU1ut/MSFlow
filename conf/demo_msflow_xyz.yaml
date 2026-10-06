@@ -1,0 +1,14 @@
+defaults:
+  - demo_msflow_263
+  - _self_
+
+exp: MMDiT_xyz_sample_1
+name: MMDiT_xyz
+model_variant: MMDiT_xyz
+raw_joint_count: 22
+raw_joint_dim: 3
+raw_mean_path: null
+raw_std_path: null
+raw_joint_layout: true
+patch_size: [1, 22]
+stride_size: [1, 22]

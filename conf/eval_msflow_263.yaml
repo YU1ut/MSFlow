@@ -1,0 +1,33 @@
+name: MMDiT
+model_variant: MMDiT
+dataset_name: t2m
+dataset_dir: ./datasets
+max_motion_length: 192
+unit_length: 4
+is_causal: true
+num_frame_per_block: 1
+max_length: 1024
+use_single_token_refiner: true
+bert_model_path: distilbert/distilbert-base-uncased
+noise_scale: 5.0
+
+seed: 3407
+num_workers: 4
+eval_batch_size: 32
+checkpoints_dir: ./checkpoints
+checkpoint: latest
+cfg: 3.0
+cal_mm: false
+feature_dim: 67
+repeat_time: 10
+gpu: "0"
+
+flow_output_type: x
+flow_t_sampler: uniform
+sigma_min: 0.01
+sampler: myheun2
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null

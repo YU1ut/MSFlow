@@ -1,0 +1,48 @@
+name: MMDiT
+model_variant: MMDiT
+dataset_name: t2m
+dataset_dir: ./datasets
+max_motion_length: 192
+unit_length: 4
+batch_size: 64
+is_causal: true
+num_frame_per_block: 1
+max_length: 1024
+use_single_token_refiner: true
+bert_model_path: distilbert/distilbert-base-uncased
+noise_scale: 5.0
+
+epoch: 500
+warm_up_iter: 2000
+accum: 1
+lr: 0.0002
+milestones: [50000]
+lr_decay: 0.1
+
+seed: 3407
+num_workers: 8
+checkpoints_dir: ./checkpoints
+
+log_every: 50
+project_name: MSFlow
+entity: your_wandb_entity
+gpu: "0"
+
+enable_eval_logging: true
+eval_split: val
+eval_every: 50
+save_eval_every_checkpoint: false
+eval_batch_size: 32
+eval_cfg: 3.0
+eval_cal_mm: false
+eval_feature_dim: 67
+
+flow_output_type: x
+flow_t_sampler: uniform
+sigma_min: 0.05
+sampler: euler
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null

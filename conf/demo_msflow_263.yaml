@@ -1,0 +1,37 @@
+exp: MMDiT_sample_1
+name: MMDiT
+model_variant: MMDiT
+dataset_name: t2m
+dataset_dir: ./datasets
+
+seed: 3407
+checkpoints_dir: ./checkpoints
+checkpoint: latest
+gpu: "0"
+cfg: 3.0
+
+length: 120
+input_text: the person walked forward and is picking up his toolbox.
+num_samples: 5
+prompt_csv: sample/sample_prompt.csv
+out_dir_root: generations
+
+# Optional model overrides. Set to null to use values from
+# checkpoints/<dataset>/<name>/config.yaml when available.
+# Set input_dim/model_input_dim to 67 for 67-dim checkpoints whose run name
+# does not end with _67.
+input_dim: null
+model_input_dim: null
+max_length: null
+is_causal: null
+num_frame_per_block: null
+bert_model_path: null
+flow_output_type: null
+flow_t_sampler: null
+sigma_min: 0.01
+sampler: myheun2
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
