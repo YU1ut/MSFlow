@@ -66,9 +66,10 @@ sample-code
 ## 🎬 Demo
 <details>
 <summary><b>Demo scripts</b></summary>
-Run the pretrained 263-dimensional model with:
 
 ### Text-to-motion generation
+
+Run the pretrained 263-dimensional model with:
 ```bash
 uv run python -m sample.demo_msflow_263 name=MMDiT_pretrained
 ```
