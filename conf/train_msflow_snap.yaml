@@ -1,0 +1,17 @@
+defaults:
+  - train_msflow_263
+  - _self_
+
+name: MMDiT_pretrained_snap_retrain
+dataset_name: snap
+model_input_dim: 296
+max_motion_length: 312
+snap_min_motion_length: 128
+snap_eval_batch_size: 100
+is_causal: false
+noise_scale: 10.0
+
+snap_text_encoder_path: google/t5-v1_1-base
+snap_text_encoder_local_files_only: false
+snap_evaluator_config: ${dataset_dir}/SnapMoGen/SnapMoGen/checkpoint_dir/snapmogen/evaluator/eval_klde-5_late-5_nlayer6_norm/evaluator.yaml
+snap_evaluator_checkpoint: ${dataset_dir}/SnapMoGen/SnapMoGen/checkpoint_dir/snapmogen/evaluator/eval_klde-5_late-5_nlayer6_norm/model/net_best_top1.tar

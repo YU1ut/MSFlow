@@ -66,10 +66,9 @@ sample-code
 ## 🎬 Demo
 <details>
 <summary><b>Demo scripts</b></summary>
+Run the pretrained 263-dimensional model with:
 
 ### Text-to-motion generation
-
-Run the pretrained 263-dimensional model with:
 ```bash
 uv run python -m sample.demo_msflow_263 name=MMDiT_pretrained
 ```
@@ -130,6 +129,25 @@ Use `name=MMDiT_pretrained` to evaluate the pretrained model.
 uv run python -m eval.eval_msflow_xyz name=<exp_name>
 ```
 Use `name=MMDiT_xyz_pretrained` to evaluate the pretrained model.
+</details>
+
+<details>
+<summary><b>SnapMoGen models</b></summary>
+
+### Data and evaluation models
+
+Run `uv sync`, then place the [SnapMoGen dataset](https://huggingface.co/datasets/Ericguo5513/SnapMoGen) under `datasets/SnapMoGen/`. It needs `meta_data/`, `data_split_info/`, `renamed_feats/`, and `all_caption_clean.json`. Place the [SnapMoGen repository](https://github.com/snap-research/SnapMoGen) at `datasets/SnapMoGen/SnapMoGen/`, including its evaluator files under `checkpoint_dir/snapmogen/evaluator/`.
+
+### Train
+```bash
+uv run python -m train.train_msflow_snap name=MMDiT_snap
+```
+
+### Evaluate
+```bash
+uv run python -m eval.eval_msflow_snap name=MMDiT_snap
+```
+
 </details>
 
 ## Acknowledgements

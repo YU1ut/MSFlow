@@ -1,0 +1,11 @@
+defaults:
+  - train_msflow_snap
+  - _self_
+
+name: MMDiT_pretrained_snap
+gpu: "0"
+checkpoint: best_fid
+sampler: myheun2
+cfg: 2.5
+cal_mm: false
+repeat_time: 10
